@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+        <style>
+         .bg {
+  /* The image used */
+  background-image: url("C:/Users/YadaveV/Desktop/Rakesh/image.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+                table {
+                  font-family: arial, sans-serif;
+                  border-collapse: collapse;
+                  width: 100%;
+                }
+                
+                td, th {
+                  border: 1px solid #dddddd;
+                  text-align: left;
+                  padding: 8px;
+                }
+                
+            
+                </style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.ajax({url: "C:/Users/YadaveV/Desktop/Rakesh/sample.json", success: function(result){
+      $("#div1").html(result);
+    }});
+  });
+});
+</script>
+</head>
+<body>
+
+
+<h2>Welcome to Dublin Bicycle</h2>
+
+
+
+
+<table>
+  <tr>
+    <th>Station Name</th>
+    <th>Bikes Available</th>
+    <th>Stands Available</th>
+      <th>Map</th>
+      <div id="div1">
+      <button>Get External Content</button>
+    </div>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  
+</table>
+
+<div class="bg"></div>
+
+
+</body>
+</html>
